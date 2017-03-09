@@ -44,7 +44,7 @@ This multi-step process includes:
 -   Create a bootable USB Drive. Please follow this guide on [how to create a bootable drive].
 -   Insert the bootable USB Drive from the previous step into your BWD051. Turn on your BWD051 device and press the **Delete** key.
 -   Change the BIOS Boot Type option filter to **Dual Boot Type**.
--   Change the BIOS OS Selection to "Windows".
+-   Change the BIOS OS Selection to **Windows**.
 -   Change the **Boot Option Priorities** to boot from your USB Drive.
 -   Save changes and restart your BWD051. Follow on screen instructions to install Windows Operating System on your BWD051.
 
@@ -60,7 +60,7 @@ This multi-step process includes:
         Navigate to **DeviceClientAmqpSample** project and open the **Program.cs** file.
 -   Locate the following code in the **Program.cs** in any of sample application based on your protocol:
 
-        **private const string DeviceconnectionString = "[device connection string]";**
+        private const string DeviceconnectionString = "<replace>";
         
 -   Replace `<replace>` with the connection string for your device.
 -   In visual Studio, under Solution Explorer, right-click the **DeviceClientAmqpSample** project, click **Build** to build the sample. 
