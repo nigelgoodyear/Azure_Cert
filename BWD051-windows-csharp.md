@@ -40,28 +40,32 @@ This multi-step process includes:
 
 <a name="Step-2-PrepareDevice"></a>
 # Step 2: Prepare your Device
-##  Install Windows  Professional on EC700-BT
+##  Install Windows 10 Professional on BWD051
 -   Create a bootable USB Drive. Please follow this guide on [how to create a bootable drive].
--   Insert the bootable USB Drive from the previous step into your EC700-BT. Turn on your EC700-BT device and press the **Delete** key.
--   Change the BIOS Boot option filter to **UEFI and Legacy**.
--   Change the BIOS OS Selection to "Windows 7".
+-   Insert the bootable USB Drive from the previous step into your BWD051. Turn on your BWD051 device and press the **Delete** key.
+-   Change the BIOS Boot Type option filter to **Dual Boot Type**.
+-   Change the BIOS OS Selection to "Windows".
 -   Change the **Boot Option Priorities** to boot from your USB Drive.
--   Save changes and restart your EC700-BT. Follow on screen instructions to install Windows Operating System on your EC700-BT.
+-   Save changes and restart your BWD051. Follow on screen instructions to install Windows Operating System on your BWD051.
 
 <a name="Step-3-Build"></a>
 # Step 3: Build and Run the sample
 
 -   Download the [Azure IoT SDK](https://github.com/Azure/azure-iot-sdks) and save them to your local repository.
 -   Start a new instance of Visual Studio 2015.
--   Open the **iothub_client_sample_amqp.sln** solution in the `azureIotSDks\c\iothub_client\samples\iothub_client_sample_amqp\windows` folder in your local copy of the repository.
--   In Visual Studio, from Solution Explorer, navigate to the **samples** folder.
--   In the **iothub_client_sample_amqp** project, open the *** iothub_client_sample_amqp.c*** file.
--   Locate the following code in the file:
+-   Open the **iothub_csharp_deviceclient.sln** solution in the csharp\device folder in your local SDK **azure-iot-sdks** directory folder in your local copy of the repository.
 
-        static const char* connectionString = "<replace>";
+-   In Visual Studio, from Solution Explorer, navigate to project based on your choice of protocol:
+    For AMQP protocol:
+        Navigate to **DeviceClientAmqpSample** project and open the **Program.cs** file.
+-   Locate the following code in the **Program.cs** in any of sample application based on your protocol:
+
+        **private const string DeviceconnectionString = "[device connection string]";**
         
 -   Replace `<replace>` with the connection string for your device.
--   In visual Studio, under Solution Explorer, right-click the **iothub_client_sample_amqp** project, click ***Debug &minus;&gt; Start new instance*** to build and run the sample. The console displays messages as the application sends device-to-cloud messages to IoT Hub.
+-   In visual Studio, under Solution Explorer, right-click the **DeviceClientAmqpSample** project, click **Build** to build the sample. 
+-   From Solution Explorer, right-click on DeviceClientAmqpSample project, click Debug, and then Start new instance to build and run the sample.
+-   The console displays messages as the application sends device-to-cloud messages to IoT Hub.
 -   See [Manage IoT Hub][lnk-manage-iot-hub] to learn how to observe the messages IoT Hub receives from the application and how to send cloud-to-device messages to the application.
 
 [download-visual-studio]: https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx
