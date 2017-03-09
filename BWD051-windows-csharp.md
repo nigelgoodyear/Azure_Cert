@@ -1,4 +1,4 @@
----
+--
 platform: windows-10-professional
 device: BWD051
 language: C#
@@ -20,7 +20,7 @@ Run a simple C# sample on BWD051 device running Windows 10 Professional
 
 **About this document**
 
-This document describes how to build and run the **simplesample_amqp** application on the BWD051 device running **Windows 107 Professional** with Azure IoT SDK.
+This document describes how to build and run the **simplesample_amqp** application on the BWD051 device running **Windows 10 Professional** with Azure IoT SDK.
 This multi-step process includes:
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
